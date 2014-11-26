@@ -17,7 +17,6 @@ npm i --save mac-regex
 ```javascript
 var mac = require('mac-regex');
 
-mac().test('aabbccddeeff') // => true
 mac().test('aa-bb-cc-dd-ee-ff') // => true
 mac().test('aa:bb:cc:dd:ee:ff') // => true
 mac().test('kljhsdf') // => false
