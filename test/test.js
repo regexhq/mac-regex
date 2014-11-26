@@ -18,4 +18,11 @@ describe('mac-regex', function() {
   it('should find a XX:XX:XX:XX:XX:XX mac when it exists with all digits', function() {
     assert.equal(mac().test('11-22-33-44-55-66'), true);
   });
+
+  it('should not find a mac when it does not exist', function() {
+    var invalidMacs = ['', 'aa', 'aabbccddeeff', '1234', '*&^(&^'];
+    invalidMacs.forEach(function(invalidMac) {
+      assert.equal(mac().test(invalidMac), false);
+    });
+  });
 });
