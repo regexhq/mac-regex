@@ -4,8 +4,6 @@
 
 A regular expression for matching MAC addresses.
 
-In the near future this will be likely moved to <https://github.com/regexps>.
-
 ## Installation
 
 ```
@@ -17,9 +15,18 @@ npm i --save mac-regex
 ```javascript
 var mac = require('mac-regex');
 
-mac().test('aa-bb-cc-dd-ee-ff') // => true
-mac().test('aa:bb:cc:dd:ee:ff') // => true
-mac().test('kljhsdf') // => false
+// Exact string option
+mac({ exact: true }).test('aa-bb-cc-dd-ee-ff')     // => true
+mac({ exact: true }).test('aa:bb:cc:dd:ee:ff')     // => true
+mac({ exact: true }).test('aa:bb:cc:dd:ee:ff   ')  // => false
+mac({ exact: true }).test('kljhsdf')               // => false
+
+// Global option (default)
+mac().test('aa:bb:cc:dd:ee:ff   ')  // => true
+mac().test('kljhsdf')               // => false
+
+'11:22:aa:44:55:33 11:22:aa:44:55:33'.match(mac())
+// => ['11:22:aa:44:55:33', '11:22:aa:44:55:33']
 ```
 
 ## Acknowledgements
