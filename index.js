@@ -1,5 +1,9 @@
 'use strict';
 
-module.exports = function() {
-  return new RegExp('^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$');
+module.exports = function(options) {
+  options = options || {};
+  var regexBase = '([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})';
+
+  return options.exact ? new RegExp('^' + regexBase + '$') :
+                         new RegeExp(regexBase + 'g')
 }
