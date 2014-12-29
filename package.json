@@ -1,6 +1,6 @@
 {
   "name": "mac-regex",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A regular expression for MAC addresses.",
   "main": "index.js",
   "directories": {
