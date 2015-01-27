@@ -1,6 +1,6 @@
 # MAC Regex
 
-[![Build Status](https://travis-ci.org/johnotander/mac-regex.svg?branch=master)](https://travis-ci.org/johnotander/mac-regex)
+[![Build Status](https://travis-ci.org/regexps/mac-regex.svg?branch=master)](https://travis-ci.org/regexps/mac-regex)
 
 A regular expression for matching MAC addresses.
 
