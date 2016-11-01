@@ -27,6 +27,6 @@
   },
   "homepage": "https://github.com/johnotander/mac-regex",
   "devDependencies": {
-    "mocha": "^2.0.1"
+    "mocha": "^3.1.2"
   }
 }
